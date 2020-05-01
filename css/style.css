@@ -79,6 +79,7 @@
 	.swiper-slide{
 		min-height: 95vh;
 		height: 100vh;
+		background-color: #000;
 	}
 
 	.swiper-container-horizontal > .swiper-scrollbar{
@@ -93,8 +94,21 @@
 
 	.content{
 		position: relative;
-		padding: 2em;
+		padding:0 2em;
+		align-self: center;
 
+	}
+
+	.content::after{
+		content: "";
+		width: 4em;
+		height: 3px;
+		background-color: #fff;
+		z-index: 10;
+		display: block;
+		position: absolute;
+		right: -2.5em;
+		top: 50%;
 	}
 	.content h1{
 		color: #fff;
@@ -134,11 +148,11 @@
 	}
 	[data-bg="2"] .clipped_bg{
 		background-image: url(../img/2.jpg);
-		clip-path: polygon(37% 32%, 98% 59%, 63% 91%, 37% 91%); /*triangle*/
+		clip-path:polygon(43.51% 19.94%, 72.89% 12.64%, 69.78% 74.64%, 40.44% 86.83%); /*triangle*/
 	}
 	[data-bg="3"] .clipped_bg{
 		background-image: url(../img/3.jpg);
-		clip-path: polygon(37% 32%, 98% 59%, 63% 91%, 37% 91%); /*triangle*/
+		clip-path: polygon(37% 32%, 86.47% 14.65%, 60.86% 78.08%, 54.02% 64.74%); /*triangle*/
 	}
 
 	.background{
