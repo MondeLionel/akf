@@ -76,6 +76,34 @@
 	}
 
 
+
+	/*swiper*/
+	
+	.next{
+		position: relative;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 0.8em;
+		font-weight: bold;
+	}
+	.next:hover{
+		color:#000;
+		z-index: 12;
+		transition: all 0.3s ease;
+	}
+	.next:hover::after{
+		content: "";
+		position: absolute;
+		width: 3em;
+		height: 100%;
+		background-color: #fff;
+		top:0;
+		left:0;
+		z-index: -1;
+		transition:all 0.3s ease;
+	}
+
+
 	.swiper-slide{
 		min-height: 95vh;
 		height: 100vh;
