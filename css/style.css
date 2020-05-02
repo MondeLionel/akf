@@ -209,7 +209,7 @@
 
 	.swiper-slide-active .scaleBack{
 		animation: scaleBack;
-		animation-duration: 3s;
+		animation-duration: 2s;
 		animation-timing-function: ease;
 		background-blend-mode: luminosity;
 		transition: all;
@@ -217,10 +217,23 @@
 
 	@keyframes scaleBack{
 		from{
-			transform: scale(1.3);
+			transform: scale(1.1);
 		}
 		to{
 			transform:scale(1);
 			
 		}
 	}
+
+
+	/*About Page*/
+
+	.about{
+		positi
+	}
+	.about .content{}
+	.about .content h1{}
+	.about .content p{}
+	.about .content a{}
+	.about .content h3{}
+	.about .content img{}
