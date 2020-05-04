@@ -32,6 +32,13 @@
 			transform: translateX(0%);
 			transition: transform 0.5s ease;
 		}
+
+	/*	.loading .swiper-container{
+			transform: translateX(10%);
+		}
+		.swiper-container{
+			transform: translateX(0%);
+		}*/
 	</style>
 </head>
 <body class="loading">
@@ -118,10 +125,36 @@
 <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
-
 			<div class="modal-body">
 				<a href="#" class="close" data-dismiss="modal">close</a>
 
+					<div class="row">
+						<div class="col-md-6"></div>
+						<div class="col-md-6 flex-col-center">
+							<p>If you have any queries about our work or working with us, fill in the form and we'll get back to you ASAP.</p>
+							<form id="contactForm" method="POST" action="/">
+								<div class="form-row">
+									<div class="col">
+										<label for="firstName">Your Name</label>
+										<input type="text" class="form-control" id="firstName" placeholder="" name="firstName">
+									</div>
+									<div class="col">
+										<label for="emailAddress">Your email address</label>
+										<input type="email" class="form-control" placeholder="" id="emailAddress" name="emailAddress">
+									</div>
+								</div>
+								<!-- <div class="form-row">
+									<label for="subject">Can we help?</label>
+
+								</div> -->
+								<div class="form-row">
+									<label for="contactMessage">Message</label>
+									<textarea name="contactMessage" id="contactMessage" class="form-control"></textarea>
+								</div>
+								<button type="submit" class="btn button">SEND</button>
+							</form>
+						</div>
+					</div>
 			</div>
 		</div>
 	</div>

@@ -14,6 +14,27 @@
 		display: flex;
 	}
 
+	.flex-col-center{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 100vh;
+	}
+
+
+	/*forms*/
+
+	.form{}
+	label{
+		font-size: 0.7em;
+		text-transform: uppercase;
+		letter-spacing: 0.12em;
+}
+	.input{}
+
+
+
+
 	/*navigation*/
 
 	.logo{}
