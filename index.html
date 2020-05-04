@@ -2,7 +2,7 @@
 <head>
 	 <meta charset="UTF-8">
 	<title>AMAKHALA FILIM</title>
-
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/swiper.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,9 +12,9 @@
 			<img src="img/logo.png" alt="">
 		</a>
 		<div class="menu">
-			<a href="#" data-menu="work" onclick="openWork()" class="button">Work</a>
-			<a href="#" data-menu="about" onclick="openAbout()">About Us</a>
-			<a href="#" data-menu="contact" onclick="openContact()">Contact Us</a>
+			<a href="javascript:void(0)" data-toggle="modal" data-target="#worksModal">Work</a>
+			<a href="javascript:void(0)" data-toggle="modal" data-target="#aboutModal">About Us</a>
+			<a href="javascript:void(0)" data-toggle="modal" data-target="#contactModal">Contact Us</a>
 		</div>
 	</div>
 		<div class="openMenu">
@@ -60,21 +60,42 @@
 	</a>
 </div>
 
-<!-- About US -->
+<div class="modal fade" id="worksModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<a href="#" class="close" data-dismiss="modal">close</a>
 
-<!-- <div class="about halfModal">
-	<span class="close">Close</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- second blade -->
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-body">
+				<a href="#" class="close" data-dismiss="modal">close</a>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Third blade -->
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+
+			<div class="modal-body">
+				<a href="#" class="close" data-dismiss="modal">close</a>
+
+			</div>
+		</div>
+	</div>
 </div>
 
-<div class="contact halfModal">
-	<span class="close">Close</span>
-</div>
-
-<div class="work halfModal">
-	<span class="close">Close</span>
-</div> -->
-
-
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<script src="js/swiper.js"></script>
 	<script src="js/main.js"></script>
 </body>

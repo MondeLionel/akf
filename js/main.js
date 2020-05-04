@@ -2,6 +2,7 @@
 
 	var mySwiper = new Swiper ('.swiper-container', {
 		direction: 'horizontal',
+		effect:'fade',
 		 keyboard: {
         	enabled: true,
       	},

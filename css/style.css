@@ -190,7 +190,8 @@
 	}
 	[data-bg="3"] .clipped_bg{
 		background-image: url(../img/3.jpg);
-		clip-path: polygon(37% 32%, 86.47% 14.65%, 60.86% 78.08%, 54.02% 64.74%); /*triangle*/
+		/*clip-path: polygon(37% 32%, 86.47% 14.65%, 60.86% 78.08%, 54.02% 64.74%);*/
+		clip-path: circle(26.74% at 730px 344px);
 	}
 
 	.background{
@@ -275,3 +276,22 @@
 	.about .content a{}
 	.about .content h3{}
 	.about .content img{}
+
+
+
+	/*Modals*/
+
+	.modal-dialog{
+		margin:0;
+	}
+	.modal-content{
+		width: 100vw;
+		height: 100vh;
+		border-radius: 0;
+		overflow:hidden;
+	}
+	.modal-body{}
+	.modal-body .close{
+		font-size: 1em;
+
+	}
