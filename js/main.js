@@ -1,5 +1,10 @@
 	'use strict'
 
+
+	$(window).load(function(){
+		$('body').removeClass('loading');
+	})
+
 	var mySwiper = new Swiper ('.swiper-container', {
 		direction: 'horizontal',
 		effect:'fade',
