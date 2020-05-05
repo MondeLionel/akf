@@ -19,6 +19,7 @@
 		flex-direction: column;
 		justify-content: center;
 		min-height: 100vh;
+		padding:0 3em;
 	}
 
 
@@ -31,6 +32,15 @@
 		letter-spacing: 0.12em;
 }
 	.input{}
+	.form-row{
+		margin:1em 0;
+	}
+
+	.form-row button{
+		background-color: #000;
+		font-size: 0.8em;
+		padding: 0.8em 2em;
+	}
 
 
 
@@ -215,6 +225,11 @@
 		clip-path: circle(26.74% at 730px 344px);
 	}
 
+	.modal-body .clipped_bg{
+		clip-path: circle(20%);
+		background-color: #ff9719;
+	}
+
 	.background{
 		position: absolute;
 		display: flex;
@@ -311,8 +326,14 @@
 		border-radius: 0;
 		overflow:hidden;
 	}
-	.modal-body{}
+	.modal-body{
+		padding: 0;
+		position: relative;
+	}
 	.modal-body .close{
 		font-size: 1em;
+		padding: 1em;
+		position: fixed;
+		right: 0;
 
 	}

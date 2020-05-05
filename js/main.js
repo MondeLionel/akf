@@ -65,7 +65,18 @@ function removeBodyClasses(){
 
 
 
+// Handle form
 
+$('#contactForm').on('submit', function(e){
+	e.preventDefault();
+	var contactForm = $('#contactForm');
+	let _username = $('#firstName').val();
+	let _useremail = $('#emailAddress').val();
+	let _contactMessage = $('#contactMessage').val();
+
+
+	
+})
 
 
 
