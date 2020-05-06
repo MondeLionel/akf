@@ -62,17 +62,6 @@
 		text-transform: uppercase;
 		letter-spacing: 0.2em;
 	}
-	.openMenu{
-		display: flex;
-		position: absolute;
-		flex-direction: column;
-		z-index: 3;
-		background-color:#fff;
-		height: 100%;
-		right: 0;
-		min-width: 30vw;
-		display: none;
-	}
 	.openMenu a{
 		text-decoration: none;
 		margin:1em 3em;
@@ -143,6 +132,12 @@
 		z-index: -1;
 		transition:all 0.3s ease;
 	}
+	/*shitty overrides*/
+	.swiper-container{
+		transform:translateX(0);
+		opacity:1;
+		transition: all 0.5s 0s ease;
+	}
 
 
 	.swiper-slide{
@@ -167,10 +162,15 @@
 		align-self: center;
 
 	}
+	.swiper-slide-active .content::after{
+		content: '';
+		width: 4em;
+		transition: width 1s ease;
+	}
 
 	.content::after{
 		content: "";
-		width: 4em;
+		width: 0em;
 		height: 3px;
 		background-color: #fff;
 		z-index: 10;
@@ -178,6 +178,7 @@
 		position: absolute;
 		right: -2.5em;
 		top: 50%;
+		transition: width 1s ease;
 	}
 	.content h1{
 		color: #fff;
@@ -191,7 +192,8 @@
 		
 	}
 	.content h3{}
-
+	.swiper-slide-active .content{}
+	.swiper-slide-active .content::after{}
 
 
 
@@ -223,7 +225,7 @@
 	[data-bg="3"] .clipped_bg{
 		background-image: url(../img/3.jpg);
 		/*clip-path: polygon(37% 32%, 86.47% 14.65%, 60.86% 78.08%, 54.02% 64.74%);*/
-		clip-path: circle(26.74% at 730px 344px);
+		clip-path: circle(26.74% at 64% 50%);
 	}
 
 	.modal-body .clipped_bg{
@@ -363,3 +365,38 @@
 		margin:0;
 		padding: 0;
 	}
+
+  .openMenu{
+		display: none;
+}
+
+.slide-in-left {
+	-webkit-animation: slide-in-left 0.35s cubic-bezier(0.91, 0.01, 0.6, 0.99) alternate both;
+	        animation: slide-in-left 0.55s cubic-bezier(.9,.03,.69,.22) alternate both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+            transform: translateX(-1000px);
+    		opacity: 0.8;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    		opacity: 1;
+  }
+}
+
+/* overrides */
+/* Shitty. I know. */
+.modal-backdrop.show{
+	display: none;
+}
+
+.modal-open{}
+.modal-open .swiper-container{
+	 transform:translateX(100px);
+	 opacity:0.5;
+	transition: all 1s 0.2s ease;
+}

@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/swiper.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
 	<style>
 
 		.loader{
@@ -32,13 +33,6 @@
 			transform: translateX(0%);
 			transition: transform 0.5s ease;
 		}
-
-	/*	.loading .swiper-container{
-			transform: translateX(10%);
-		}
-		.swiper-container{
-			transform: translateX(0%);
-		}*/
 	</style>
 </head>
 <body class="loading">
@@ -51,17 +45,14 @@
 		<a href="#" class="logo">
 			<img src="img/logo.png" alt="">
 		</a>
+		<a href="#" class="openMenu" onclick="toggleMenu()">Menu</a>
 		<div class="menu">
 			<a href="javascript:void(0)" data-toggle="modal" data-target="#worksModal">Work</a>
 			<a href="javascript:void(0)" data-toggle="modal" data-target="#aboutModal">About Us</a>
 			<a href="javascript:void(0)" data-toggle="modal" data-target="#contactModal">Contact Us</a>
 		</div>
+
 	</div>
-		<div class="openMenu">
-			<a href="#">Contact Us</a>
-			<a href="#">About Us</a>
-			<a href="#">Works</a>
-		</div>
 	<!-- Slider main container -->
 <div class="swiper-container">
     <!-- Additional required wrapper -->
@@ -100,7 +91,7 @@
 	</a>
 </div>
 
-<div class="modal fade" id="worksModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
+<div class="modal slide-in-left" id="worksModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-body">
@@ -144,7 +135,7 @@
 	</div>
 </div>
 <!-- second blade -->
-<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
+<div class="modal slide-in-left" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-body">
@@ -167,7 +158,7 @@
 	</div>
 </div>
 <!-- Third blade -->
-<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
+<div class="modal slide-in-left" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-body">
@@ -182,11 +173,11 @@
 							<p>If you have any queries about our work or working with us, fill in the form and we'll get back to you ASAP.</p>
 							<form id="contactForm" method="POST" action="https://forms.un-static.com/forms/92e3186f20a21cdc22ba7a5616039493a22c1907">
 								<div class="form-row">
-									<div class="col">
+									<div class="col-md-6">
 										<label for="firstName">Your Name</label>
 										<input type="text" class="form-control" id="firstName" placeholder="" name="firstName">
 									</div>
-									<div class="col">
+									<div class="col-md-6">
 										<label for="emailAddress">Your email address</label>
 										<input type="email" class="form-control" placeholder="" id="emailAddress" name="emailAddress">
 									</div>

@@ -8,6 +8,7 @@
 	var mySwiper = new Swiper ('.swiper-container', {
 		direction: 'horizontal',
 		effect:'fade',
+		loop:true,
 		 keyboard: {
         	enabled: true,
       	},
@@ -62,6 +63,10 @@ function removeBodyClasses(){
 	body.classList.remove("about")
 }
 
+function toggleMenu(){
+	
+	body.classList.toggle("menuOpen")
+}
 
 
 
@@ -73,10 +78,10 @@ $('#contactForm').on('submit', function(e){
 	let _username = $('#firstName').val();
 	let _useremail = $('#emailAddress').val();
 	let _contactMessage = $('#contactMessage').val();
+});
 
 
-	
-})
+
 
 
 

@@ -1,0 +1,88 @@
+@media (max-width: 768px) {
+	.slide-in-left{
+		animation-name: slide-in-left;
+		animation-timing-function: ease;
+		animation-delay: 0.5s;
+		animation-duration: 0.7s;
+	}
+	
+	@keyframes slide-in-left {
+		from{
+			transform: translateX(-100%);
+			
+		}
+		to{
+			transform: translateX(0);
+			
+		}
+	}	
+}
+
+
+@media (max-width: 600px) {
+	.frame{
+		height: auto;
+		align-items: flex-start;
+		margin-top: 0;
+		width: 100vw;
+		padding: 0;
+	}
+	.menu{
+		display: flex;
+		position: absolute;
+		top:0;
+		flex-direction: column;
+		width: 100%;
+		height: 100vh;
+		background-color: #fff;
+		transform: translateX(100%);
+		justify-content: center;
+		transition: transform 0.5s ease;
+	}
+
+	.menu a{
+		color: #000;
+		text-align: center;
+		padding: 2em 1em;
+		position: relative;
+		overflow:hidden;
+	}
+
+	.menu a::after{
+		content: "";
+		position: absolute;
+		height: 100vh;
+		width: 95%;
+		top: 0;
+		left: 0;
+		right:0;
+		background-color: red;
+		margin: 0 auto;
+		transform: translateX(0);
+		transition:transform 0.5s 0.5s ease;
+	}
+	
+	.menuOpen .menu a::after{
+		transform:translateX(-100%);
+		height: 200%;
+		transition:transform 0.5s 0.5s ease;
+	}
+	.openMenu{
+		display: block;
+		z-index: 100;
+		padding: 1em;
+	}
+	.menuOpen .openMenu{
+		color: #000;
+	}
+
+	.menuOpen .menu{
+		transform: translateX(0);
+		transition: transform 0.5s ease;
+	}
+}
+
+
+@media (max-width: 375px){
+
+}
