@@ -81,6 +81,22 @@ $('#contactForm').on('submit', function(e){
 });
 
 
+// handle modal animations
+
+
+		$('.close').on('click', function(e){
+			e.preventDefault();
+			
+			$('.modal').addClass('slide-out-left');
+
+			setTimeout(function(){
+				$('.modal').removeClass('slide-out-left');
+				// $('.modal').addClass('slide-in-left');
+			},10000)
+		})
+
+
+
 
 
 

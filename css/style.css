@@ -2,6 +2,7 @@
 		margin: 0;
 		padding:0;
 		font-family: 'Roboto', sans-serif;
+		position: relative;
 	}
 	.button{
 		padding: 0.2em 0.4em;
@@ -22,7 +23,36 @@
 		padding:0 3em;
 	}
 
+  .transitioner{
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color:yellow;
+		animation-name:slide__left;
+		animation-duration: 1s;
+		animation-direction: normal;
+		animation-fill-mode: forwards;
+		z-index: 10;
+  }
 
+@keyframes slide__left{
+	0%{
+		transform: translateX(-100%);
+	}
+	
+	50%{
+		transform: translateX(0);
+	}
+	
+	100%{
+		transform: translateX(100%);
+	}
+
+}
 	/*forms*/
 
 	.form{}
@@ -319,6 +349,10 @@
 
 
 	/*Modals*/
+  #contactModal{
+		overflow: hidden;
+		display: block;
+}
 
 	.modal-dialog{
 		margin:0;
@@ -327,7 +361,7 @@
 		width: 100vw;
 		min-height: 100vh;
 		border-radius: 0;
-		/*! overflow:hidden; */
+		overflow:hidden;
 	}
 	.modal-body{
 		padding: 0;
@@ -379,11 +413,29 @@
   0% {
     -webkit-transform: translateX(-1000px);
             transform: translateX(-1000px);
-    		opacity: 0.8;
+    		opacity: 1;
   }
   100% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
+    		opacity: 1;
+  }
+}
+
+.slide-out-left {
+	-webkit-animation: slide-out-left 0.35s cubic-bezier(0.91, 0.01, 0.6, 0.99) alternate both;
+	        animation: slide-out-left 0.55s cubic-bezier(.9,.03,.69,.22) alternate both;
+}
+
+@keyframes slide-out-left {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    		opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
     		opacity: 1;
   }
 }
