@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="css/swiper.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/glitch-text.css">
 	<style>
 
 		.loader{
@@ -32,6 +33,10 @@
 		.loading .loader{
 			transform: translateX(0%);
 			transition: transform 0.5s ease;
+		}
+		.hidden{
+			opacity: 0;
+			visibility: hidden;
 		}
 	</style>
 </head>
@@ -80,19 +85,20 @@
         		<p>Digital driving business.</p>
         	</div>
         </div>
-        ...
     </div>
     <!-- If we need scrollbar -->
     <!-- <div class="swiper-scrollbar"></div> -->
 </div>
 <div class="pageNav">
-	<a href="#"></a>
+	<a href="#" class="next prev">
+		Previous
+	</a>
 	<a href="#" class="next">
 		Next
 	</a>
 </div>
 
-<div class="modal slide-in-left" id="worksModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
+<div class="modal fade" id="worksModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-body">
@@ -136,7 +142,7 @@
 	</div>
 </div>
 <!-- second blade -->
-<div class="modal slide-in-left" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
+<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-body">
@@ -157,7 +163,7 @@
 	</div>
 </div>
 <!-- Third blade -->
-<div class="modal" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-body">

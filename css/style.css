@@ -42,14 +42,17 @@
 @keyframes slide__left{
 	0%{
 		transform: translateX(-100%);
+		display: block;
 	}
 	
 	50%{
 		transform: translateX(0);
+		display: block;
 	}
 	
 	100%{
 		transform: translateX(100%);
+		display: none;
 	}
 
 }
@@ -60,7 +63,7 @@
 		font-size: 0.7em;
 		text-transform: uppercase;
 		letter-spacing: 0.12em;
-}
+	}
 	.input{}
 	.form-row{
 		margin:1em 0;
@@ -108,7 +111,7 @@
 		align-items: center;
 		justify-content: space-between;
 		position: fixed;
-		width: 95vw;
+		width: 100vw;
 		height: 40px;
 		top: 0;
 		padding: 0.5em 1em;
@@ -124,7 +127,7 @@
 	.pageNav{
 		position: fixed;
 		bottom:0;
-		width: 95vw;
+		width: 100vw;
 		display: flex;
 		justify-content: space-between;
 		padding:0.5em 1em;
@@ -133,8 +136,6 @@
 	.pageNav a{
 		color: #fff;
 	}
-
-
 
 	/*swiper*/
 	
@@ -145,23 +146,44 @@
 		font-size: 0.8em;
 		font-weight: bold;
 		letter-spacing: 0.2em;
+		background-color: #936b16;
+		padding: 0.5em;
+		text-decoration: none;
+		border-radius: 2em;
+		color: #000;
 	}
 	.next:hover{
 		color:#000;
 		z-index: 12;
 		transition: all 0.3s ease;
+		text-decoration: none;
 	}
 	.next:hover::after{
 		content: "";
 		position: absolute;
-		width: 3em;
+		/*! width: 5em; */
 		height: 100%;
+		/*! margin:0 1em; */
 		background-color: #fff;
 		top:0;
 		left:0;
 		z-index: -1;
-		transition:all 0.3s ease;
+		transition:width 0.3s ease;
+		border-radius: 3em;
 	}
+	.next:hover::before{
+/* 		content: ""; */
+		position: absolute;
+		width: 5em;
+		height: 100%;
+		background-color: red;
+		top: 0;
+		left:0;
+		clip-path: circle 30%;
+	}
+
+
+
 	/*shitty overrides*/
 	.swiper-container{
 		transform:translateX(0);
@@ -224,10 +246,6 @@
 	.content h3{}
 	.swiper-slide-active .content{}
 	.swiper-slide-active .content::after{}
-
-
-
-
 
 	.clipped_bg{
 		position: absolute;
@@ -351,7 +369,7 @@
 	/*Modals*/
   #contactModal{
 		overflow: hidden;
-		display: block;
+		/*display: block;*/
 }
 
 	.modal-dialog{
@@ -448,7 +466,9 @@
 
 .modal-open{}
 .modal-open .swiper-container{
-	 transform:translateX(100px);
-	 opacity:0.5;
+	 transform:scale(0.9);
+	 /*opacity:0.5;*/
 	transition: all 1s 0.2s ease;
 }
+
+.menuOpen .pageNav{}
