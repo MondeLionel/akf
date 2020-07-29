@@ -45,6 +45,11 @@
 // Shitty js dev work
 
 var body = document.getElementsByTagName("body")[0];
+var _jscontactUs = $(".contact-us")
+$(".contact-tip").on('click', function(){
+	_jscontactUs.toggleClass("contact-open")
+	console.log("click")
+})
 
 function openWork(){
 	body.classList.add("work");
@@ -52,11 +57,6 @@ function openWork(){
 	body.classList.remove("about")
 }
 
-function openContact(){
-	body.classList.add("contact")
-	body.classList.remove("work")
-	body.classList.remove("about")
-}
 
 function openAbout(){
 	body.classList.add("about")
