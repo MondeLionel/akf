@@ -38,6 +38,16 @@
 			opacity: 0;
 			visibility: hidden;
 		}
+		.mobile-only{
+			display: none;
+		}
+
+
+		@media screen and (max-width:420px) {
+			.mobile-only{
+				display: block;
+			}
+		}
 	</style>
 </head>
 <body class="loading">
@@ -56,6 +66,7 @@
 			<a href="javascript:void(0)" data-toggle="modal" data-target="#worksModal">Work</a>
 			<a href="javascript:void(0)" data-toggle="modal" data-target="#aboutModal">About Us</a>
 			<a href="javascript:void(0)" class="contact-tip">Contact Us</a>
+			<a href="sms:27612176298?&body=Eat a dick nigga" class="mobile-only">SMS us!</a>
 		</div>
 
 	</div>
@@ -114,14 +125,7 @@
 			<div class="modal-body">
 				<a href="#" class="close" data-dismiss="modal">close</a>
 				<div class="workContent">
-			<!-- 	<div class="staggeredContent row">
-					<div class="col-md-6 item">
-						<p>A PHOENIX RISEN</p>
-					</div>
-					<div class="col-md-6 item">
-						<img src="img/photography.jpg" alt="">
-					</div>
-				</div> -->
+
 		
 				</div>
 			</div>
@@ -153,49 +157,7 @@
 		
 	</div>
 </div>
-<!-- Third blade -->
-<!-- <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-body">
-				<a href="#" class="close" data-dismiss="modal">close</a>
 
-					<div class="row">
-						<div class="col-md-6">
-							<div class="background scaleBack"></div>
-							<div class="clipped_bg"></div>
-						</div>
-						<div class="col-md-6 flex-col-center">
-							<p>If you have any queries about our work or working with us, fill in the form and we'll get back to you ASAP.</p>
-							<form id="contactForm" method="POST" action="https://forms.un-static.com/forms/92e3186f20a21cdc22ba7a5616039493a22c1907">
-								<div class="form-row">
-									<div class="col-md-6">
-										<label for="firstName">Your Name</label>
-										<input type="text" class="form-control" id="firstName" placeholder="" name="firstName">
-									</div>
-									<div class="col-md-6">
-										<label for="emailAddress">Your email address</label>
-										<input type="email" class="form-control" placeholder="" id="emailAddress" name="emailAddress">
-									</div>
-								</div>
-								<div class="form-row">
-									<label for="subject">Can we help?</label>
-								</div>
-								<div class="form-row">
-									<label for="contactMessage">Message</label>
-									<textarea name="contactMessage" id="contactMessage" class="form-control"></textarea>
-								</div>
-								<div class="form-row">
-									<button type="submit" class="btn">SEND</button>
-								</div>
-							</form>
-						</div>
-					</div>
-			</div>
-		</div>
-	</div>
-</div>
- -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/swiper.js"></script>
