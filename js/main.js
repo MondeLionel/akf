@@ -80,13 +80,19 @@ function toggleMenu(){
 
 
 // Handle form
+const formV = $('#contact-form')
 
-$('#contactForm').on('submit', function(e){
+formV.on('submit', function(e){
 	e.preventDefault();
-	var contactForm = $('#contactForm');
-	let _username = $('#firstName').val();
-	let _useremail = $('#emailAddress').val();
-	let _contactMessage = $('#contactMessage').val();
+	const formData = new FormData(formV[0]);
+
+	const name = formData.get('name');
+	const number = formData.get('whatsapp-number');
+	const email = formData.get('email')
+
+	const formObject = {name,number,email};
+	console.log(formObject)
+
 });
 
 
@@ -107,6 +113,10 @@ $('#contactForm').on('submit', function(e){
 
 // 	},1000)
 // })
+
+
+
+// form 
 
 
 
