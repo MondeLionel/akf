@@ -5,7 +5,7 @@
 		$('body').removeClass('loading');
 	})
 
-	var mySwiper = new Swiper ('.swiper-container', {
+	var mySwiper = new Swiper ('.swiper-container.cover', {
 		direction: 'horizontal',
 		effect:'fade',
 		loop:true,
@@ -93,6 +93,8 @@ formV.on('submit', function(e){
 	const formObject = {name,number,email};
 	console.log(formObject)
 
+	
+
 });
 
 
@@ -117,6 +119,57 @@ formV.on('submit', function(e){
 
 
 // form 
+
+
+$('#worksModal').on('shown.bs.modal', function () {
+  var worksSwiper = new Swiper('.swiper-container.works',{
+	direction:'horizontal',
+	navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  parallax:true,
+  speed:700,
+   keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+})
+})
+
+
+// let videoElem = document.getElementById("video");
+let videoElem = document.getElementsByTagName("video");
+let playButton = document.getElementById("playbutton");
+
+// $("span").parents("ul");
+// $("span").parentsUntil("div");
+
+
+// playButton.addEventListener("click", handlePlayButton, false);
+// playVideo();
+
+
+// // to start playing the video
+// async function playVideo() {
+//   try {
+//     await videoElem.play();
+//     playButton.classList.add("playing");
+//   } catch(err) {
+//     playButton.classList.remove("playing");
+//   }
+// }
+
+// // for pausing and play
+
+// function handlePlayButton() {
+//   if (videoElem.paused) {
+//     playVideo();
+//   } else {
+//     videoElem.pause(); 
+//     playButton.classList.remove("playing");
+//   }
+// }
 
 
 
