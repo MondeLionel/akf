@@ -3,6 +3,7 @@
 
 	$(window).load(function(){
 		$('body').removeClass('loading');
+		let video = $("video");
 	})
 
 	var mySwiper = new Swiper ('.swiper-container.cover', {
@@ -122,6 +123,8 @@ formV.on('submit', function(e){
 
 
 $('#worksModal').on('shown.bs.modal', function () {
+
+
   var worksSwiper = new Swiper('.swiper-container.works',{
 	direction:'horizontal',
 	navigation: {
@@ -129,47 +132,84 @@ $('#worksModal').on('shown.bs.modal', function () {
     prevEl: '.swiper-button-prev',
   },
   parallax:true,
+
   speed:700,
    keyboard: {
     enabled: true,
     onlyInViewport: false,
   },
+  on:{
+  	init: function(){
+  			let current_video = $('.swiper-slide-active').find("video");
+			let other_videos = $('swiper-slide').find("video");
+			current_video.trigger('play');
+  	}
+  }
 })
+
+// play video on slide
+
+
+// current_video.trigger('play');
+let current_video = $('.swiper-slide-active').find("video");
+
+worksSwiper.on("slideChange", function(){
+	// pause video on slide change
+	// let currently_video = $('.swiper-slide-active').find("video");
+	let allVideos = $('.swiper-slide').find("video");
+	allVideos.forEach(pauseVideo());
+
+	function pauseVideo(item, index){
+		// item.get(index).pause();
+		console.log(index)
+	}
+
+	// if($('.swiper-slide').hasClass("swiper-slide-active")){
+	// 	$('.swiper-slide-active').find("video").get(0).play();
+	// 	console.log("active")
+	// }else{
+	// 	$('.swiper-slide').find("video").get(0).pause();
+	// }
+
+
+	console.log("slidechanges");
+})
+
+// whoosh video on closing modal
+$('.close').on('click', function(){
+	$("video").get(0).pause();
 })
 
 
-// let videoElem = document.getElementById("video");
-let videoElem = document.getElementsByTagName("video");
-let playButton = document.getElementById("playbutton");
-
-// $("span").parents("ul");
-// $("span").parentsUntil("div");
-
-
-// playButton.addEventListener("click", handlePlayButton, false);
-// playVideo();
+// play video after click
+$("video").on('click', function(){
+	
+	this.paused ? this.play() : this.pause();
+})
 
 
-// // to start playing the video
-// async function playVideo() {
-//   try {
-//     await videoElem.play();
-//     playButton.classList.add("playing");
-//   } catch(err) {
-//     playButton.classList.remove("playing");
-//   }
-// }
 
-// // for pausing and play
 
-// function handlePlayButton() {
-//   if (videoElem.paused) {
-//     playVideo();
-//   } else {
-//     videoElem.pause(); 
-//     playButton.classList.remove("playing");
-//   }
-// }
+// initialise videos with videojs
+
+let myPlayers = Array(
+	videojs('favela'),
+	videojs('feels'),
+	videojs('schwepps'),
+	videojs('phesheya'),
+	videojs('bee'),
+	videojs('homii'),
+	videojs('dsff'),
+	videojs('nostalgia'),
+	videojs('oxy'),
+	videojs('butifly'),
+	videojs('pop')
+	)
+
+
+
+})
+
 
 
 

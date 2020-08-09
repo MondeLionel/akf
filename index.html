@@ -5,9 +5,10 @@
 	<title>AMAKHALA FILIM</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/swiper.css">
+	<link rel="stylesheet" href="css/video-js.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css" type="text/css">
-	<link rel="stylesheet" href="css/glitch-text.css">
+	<!-- <link rel="stylesheet" href="css/glitch-text.css"> -->
 	<style>
 
 		.loader{
@@ -49,6 +50,15 @@
 			}
 		}
 
+		.nostalgia-dimensions{
+			width: auto! important;
+			height: auto! important;
+		}
+
+		.vjs-v7{
+			width: auto! important;
+			height: auto! important;
+		}
 
 		
 	</style>
@@ -140,7 +150,11 @@
 										</div>
 										<!-- <button id="playbutton">PLAY</button> -->
 										<div class="mobile">
-											<video id="favela" src="video/favela.mp4"></video>
+											<!-- <a href="javascript:void(0)" id="playbutton1" class="btn btn-primary">PLAY</a> -->
+											<video id="favela">
+												<source src="video/favela.mp4" type="video/mp4">
+											</video>
+											<!-- <video id="favela" src="video/favela.mp4"></video> -->
 										</div>
 									</div>
 								</div>
@@ -152,7 +166,10 @@
 										</div>
 										<!-- <button id="playbutton">PLAY</button> -->
 										<div class="mobile">
-											<video id="feels" src="video/feels.mp4"></video>
+											<!-- <a href="javascript:void(0)" id="playbutton2" class="btn btn-primary">PLAY</a> -->
+											<video id="feels">
+												<source src="video/feels.mp4">
+											</video>
 										</div>
 									</div>
 								</div>
@@ -163,6 +180,7 @@
 											<h1>2020</h1>
 										</div>
 										<div class="mobile">
+											<!-- <a href="javascript:void(0)" id="playbutton3" class="btn btn-primary">PLAY</a> -->
 											<video id="schwepps" src="video/pink-schwepps.mp4"></video>
 										</div>
 									</div>
@@ -174,6 +192,7 @@
 											<h1>2020</h1>
 										</div>
 										<div class="mobile">
+											<!-- <a href="javascript:void(0)" id="playbutton4" class="btn btn-primary">PLAY</a> -->
 											<video id="phesheya" src="video/phesheya.mp4"></video>
 										</div>
 									</div>
@@ -196,7 +215,8 @@
 											<h1>2020</h1>
 										</div>
 										<div class="tablet">
-											<video src="video/bee.mp4"></video>
+											<!-- <a href="javascript:void(0)" id="playbutton5" class="btn btn-primary">PLAY</a> -->
+											<video id="bee" src="video/bee.mp4"></video>
 										</div>
 									</div>
 								</div>
@@ -207,7 +227,8 @@
 											<h1>2020</h1>
 										</div>
 										<div class="tablet">
-											<video src="video/homii.mp4"></video>
+											<!-- <a href="javascript:void(0)" id="playbutton6" class="btn btn-primary">PLAY</a> -->
+											<video id="homii" src="video/homii.mp4"></video>
 										</div>
 									</div>
 								</div>
@@ -218,7 +239,8 @@
 											<h1>2019</h1>
 										</div>
 										<div class="tablet">
-											<video src="video/dsff.mp4"></video>
+											<!-- <a href="javascript:void(0)" id="playbutton7" class="btn btn-primary">PLAY</a> -->
+											<video id="dsff" src="video/dsff.mp4"></video>
 										</div>
 									</div>
 								</div>
@@ -229,7 +251,8 @@
 											<h1>2020</h1>
 										</div>
 										<div class="mobile">
-											<video src="video/nostalgia.mp4"></video>
+											<!-- <a href="javascript:void(0)" id="playbutton8" class="btn btn-primary">PLAY</a> -->
+											<video id="nostalgia" src="video/nostalgia.mp4"></video>
 										</div>
 									</div>
 								</div>
@@ -240,7 +263,8 @@
 											<h1>2020</h1>
 										</div>
 										<div class="tablet">
-											<video src="video/oxy.mp4"></video>
+											<!-- <a href="javascript:void(0)" id="playbutton9" class="btn btn-primary">PLAY</a> -->
+											<video id="oxy" src="video/oxy.mp4"></video>
 										</div>
 									</div>
 								</div>
@@ -251,7 +275,8 @@
 											<h1>2019</h1>
 										</div>
 										<div class="mobile">
-											<video src="video/butifly.mp4"></video>
+											<!-- <a href="javascript:void(0)" id="playbutton10" class="btn btn-primary">PLAY</a> -->
+											<video id="butifly" src="video/butifly.mp4"></video>
 										</div>
 									</div>
 								</div>
@@ -262,7 +287,8 @@
 											<h1>2020</h1>
 										</div>
 										<div class="tablet">
-											<video src="video/pop.mp4"></video>
+											<!-- <a href="javascript:void(0)" id="playbutton11" class="btn btn-primary">PLAY</a> -->
+											<video id="pop" src="video/pop.mp4"></video>
 										</div>
 									</div>
 								</div>
@@ -273,7 +299,7 @@
 							<div class="swiper-button-next"></div>
 							<div class="swiper-button-prev"></div>
 						</div>
-						
+
 					</div>
 				</div>
 			</div>
@@ -285,7 +311,7 @@
 			<div class="modal-content">
 				<div class="modal-body">
 					<a href="#" class="close" data-dismiss="modal">close</a>
-					
+
 					<div class="aboutContent">
 						<div class="heading">
 							<!-- <h2>PROMOGRAPHY</h2> -->
@@ -296,11 +322,11 @@
 						</div>
 					</div>
 					<div class="colorBg">
-						
+
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 
@@ -326,17 +352,19 @@
 						<button type="submit" class="btn btn-primary">SEND IT!</button>
 					</form>
 					<div class="colorBg">
-						
+
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/swiper.js"></script>
+	<script src="js/video.min.js"></script>
+	<!-- <script src="js/videoplayer.js"></script> -->
 	<script src="js/main.js"></script>
 	<script>
 
