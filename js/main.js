@@ -113,35 +113,10 @@ formV.on('submit', function(e){
 	
 
 });
-
-
-// handle modal animations
-
-
-// $('.close').on('click', function(e){
-// 	e.preventDefault();
-// 	var modal = $('.modal');
-// 		modal.removeClass('slide-in-left');
-// 		modal.addClass('slide-out-left');
-// 		modal.css("display", "block")
-
-// 	setTimeout(function(){
-// 		modal.removeClass('slide-out-left');
-// 		modal.addClass('slide-in-left');
-// 		modal.css("display", "none");
-
-// 	},1000)
-// })
-
-
-
-// form 
+ 
 
 
 $('#worksModal').on('shown.bs.modal', function () {
-
-	
-
 	if(sessionStorage.getItem("audio_prompt") != null || sessionStorage.getItem("audio_prompt") != undefined){
 		$("body").removeClass("video-prompt")
 	}else{
@@ -179,23 +154,17 @@ let current_video = $('.swiper-slide-active').find("video");
 
 worksSwiper.on("slideChange", function(){
 	// pause video on slide change
-	// let currently_video = $('.swiper-slide-active').find("video");
 	let allVideos = $('.swiper-slide').find("video");
-	allVideos.forEach(function(item,index){
-		console.log(item[index])
-	});
 
-	function pauseVideo(item, index){
-		// item.get(index).pause();
-		console.log(index)
+	for(var video in allVideos){
+		// console.log(allVideos[video])
+		console.log(video)
 	}
-
-	// if($('.swiper-slide').hasClass("swiper-slide-active")){
-	// 	$('.swiper-slide-active').find("video").get(0).play();
-	// 	console.log("active")
-	// }else{
-	// 	$('.swiper-slide').find("video").get(0).pause();
-	// }
+	let newVids = Object.entries(allVideos)
+	
+	newVids.forEach(function(item,index){
+			console.log(item[index])
+	})
 
 
 	console.log("slidechanges");
