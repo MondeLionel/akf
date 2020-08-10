@@ -4,6 +4,22 @@
 	$(window).load(function(){
 		$('body').removeClass('loading');
 		let video = $("video");
+		var main_content = $(".loader");
+		var proximity = $(".loaderImg")
+		var movementStrength = 6;
+		if(main_content != null || main_content != undefined){
+			main_content.on("mousemove", function(e){
+				if (e.clientX > 0 && e.clientY > 0){
+					proximity.addClass("show");
+					var xtrans = movementStrength*100 / e.clientX *100 - proximity.width();
+					var xtrans = Math.floor(xtrans);
+					proximity.css("animation-duration", xtrans + "s");
+					// console.log(Math.floor(xtrans));
+				}else{
+					proximity.removeClass("show");
+				}
+			})
+		}
 	})
 
 	var mySwiper = new Swiper ('.swiper-container.cover', {

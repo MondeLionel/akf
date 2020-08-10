@@ -24,6 +24,7 @@
 .prompt .prompt-content p{}
 .prompt .prompt-content a{background-color: antiquewhite;letter-spacing: 3px;}
 
+
 .contact-open.contact-us{transform: translateY(0);transition: transform 0.2s cubic-bezier(.08,.82,.17,1);/*! transform-origin: 400px top; */}
 .contact-tip{/*! position: absolute; *//*! max-width: 401px; *//*! z-index: 2; *//*! display: flex; *//*! justify-content: space-between; *//*! right: 2em; *//*! background-color: #fdb927; *//*! border-radius: 10px; *//*! top: 3.4em; *//*! overflow: hidden; *//*! flex-wrap: wrap; *//*! width: 100%; */}
 .contact-us{position: absolute;max-width: 351px;z-index: 2;display: flex;justify-content: space-between;right: 2em;background-color: #fdb927;/*! border-radius: 10px; */top: 3.4em;/*! overflow: hidden; */flex-wrap: wrap;width: 100%;transform: translateY(-130px);transition: transform 0.2s cubic-bezier(.08,.82,.17,1);/*! transform-origin: 400px top; */justify-items: center;}
