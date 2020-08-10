@@ -124,6 +124,14 @@ formV.on('submit', function(e){
 
 $('#worksModal').on('shown.bs.modal', function () {
 
+	
+
+	if(sessionStorage.getItem("audio_prompt") != null || sessionStorage.getItem("audio_prompt") != undefined){
+		$("body").removeClass("video-prompt")
+	}else{
+		$("body").addClass("video-prompt");
+	}
+
 
   var worksSwiper = new Swiper('.swiper-container.works',{
 	direction:'horizontal',
@@ -157,7 +165,9 @@ worksSwiper.on("slideChange", function(){
 	// pause video on slide change
 	// let currently_video = $('.swiper-slide-active').find("video");
 	let allVideos = $('.swiper-slide').find("video");
-	allVideos.forEach(pauseVideo());
+	allVideos.forEach(function(item,index){
+		console.log(item[index])
+	});
 
 	function pauseVideo(item, index){
 		// item.get(index).pause();
@@ -211,8 +221,28 @@ let myPlayers = Array(
 })
 
 
+// handle prompt
+
+$(".prompt-clear").on('click', function(){
+	// if(sessionStorage.getItem("audio_prompt") != null || sessionStorage.getItem("audio_prompt") != undefined){
+	// 	console.log(sessionStorage.getItem("audio_prompt"))
+	// 	$("body").removeClass("video-prompt")
+	// }
+	$("body").removeClass("video-prompt")
+	sessionStorage.setItem('audio_prompt', 'seen');		
+})
 
 
+
+// check is prompt has been visited
+
+// function checkPrompt(){
+// 	if(sessionStorage.getItem("audio_prompt") != null || sessionStorage.getItem("audio_prompt") != undefined){
+// 		$("body").removeClass("video-prompt")
+// 	}
+// }
+
+// checkPrompt();
 
 
 
