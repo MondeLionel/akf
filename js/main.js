@@ -68,6 +68,15 @@ $(".contact-tip").on('click', function(){
 	console.log("click")
 })
 
+function playVid (){
+	
+}
+
+function pauseVid(){
+	// this.playing ? this.pause() : this.play();
+}
+
+
 function openWork(){
 	body.classList.add("work");
 	body.classList.remove("contact")
@@ -110,10 +119,18 @@ formV.on('submit', function(e){
 	const formObject = {name,number,email};
 	console.log(formObject)
 
-	
-
 });
  
+$('#aboutModal').on('shown.bs.modal', function(){
+	var aboutSwiper = new Swiper('.swiper-container.about-swiper',{
+		direction:'vertical',
+		speed:500,
+		 keyboard:{
+		 	enabled:true,
+		 	onlyInViewport: false,
+		 }
+	  }
+	)})
 
 
 $('#worksModal').on('shown.bs.modal', function () {
@@ -131,7 +148,6 @@ $('#worksModal').on('shown.bs.modal', function () {
     prevEl: '.swiper-button-prev',
   },
   parallax:true,
-
   speed:700,
    keyboard: {
     enabled: true,
@@ -156,32 +172,28 @@ worksSwiper.on("slideChange", function(){
 	// pause video on slide change
 	let allVideos = $('.swiper-slide').find("video");
 
-	for(var video in allVideos){
-		// console.log(allVideos[video])
-		console.log(video)
-	}
+	// for(var video in allVideos){
+		
+	// }
 	let newVids = Object.entries(allVideos)
 	
 	newVids.forEach(function(item,index){
-			console.log(item[index])
+			// console.log(item.paused)
+
 	})
 
 
-	console.log("slidechanges");
+	// console.log("slidechanges");
 })
 
 // whoosh video on closing modal
-$('.close').on('click', function(){
-	$("video").get(0).pause();
-})
+$('.close').on('click', pauseVid())
 
 
 // play video after click
 $("video").on('click', function(){
-	
 	this.paused ? this.play() : this.pause();
 })
-
 
 
 
@@ -201,33 +213,21 @@ let myPlayers = Array(
 	videojs('pop')
 	)
 
-
-
+	myPlayers.forEach(function(item,index){
+		// console.log(index)vbv
+	})
 })
+
 
 
 // handle prompt
 
 $(".prompt-clear").on('click', function(){
-	// if(sessionStorage.getItem("audio_prompt") != null || sessionStorage.getItem("audio_prompt") != undefined){
-	// 	console.log(sessionStorage.getItem("audio_prompt"))
-	// 	$("body").removeClass("video-prompt")
-	// }
 	$("body").removeClass("video-prompt")
 	sessionStorage.setItem('audio_prompt', 'seen');		
 })
 
 
-
-// check is prompt has been visited
-
-// function checkPrompt(){
-// 	if(sessionStorage.getItem("audio_prompt") != null || sessionStorage.getItem("audio_prompt") != undefined){
-// 		$("body").removeClass("video-prompt")
-// 	}
-// }
-
-// checkPrompt();
 
 
 

@@ -3,7 +3,12 @@
 		padding:0;
 		font-family: 'Roboto', sans-serif;
 		position: relative;
+		background-color: #ffbc00;
 	}
+
+body.modal-open{
+	background-color: #ffbc00;
+}
 	.button{
 		padding: 0.2em 0.4em;
 		font-weight: bold;
@@ -421,6 +426,7 @@
 		min-height: 100vh;
 		border-radius: 0;
 		overflow:hidden;
+		/*! background-color: mintcream; */
 	}
 	.modal-body{
 		padding: 0;
@@ -430,25 +436,106 @@
 		font-size: 1em;
 		padding: 1em;
 		position: absolute;
-		right: 0;
+		right: 1em;
 		z-index: 10;
 
 		background-color: aqua;
 	}
 
 	.aboutContent{
-		padding: 3em;
+		/*! padding: 3em; */
 		height: 100%;
 		margin-top: auto;
+		width: 80%;
+		margin: 0 auto;
+		display: flex;
+		/*! justify-content: center; */
+		/*! align-items: center; */
+		height: 100vh;
 	}
-	.aboutContent h1{
+	.aboutContent h1,
+	.aboutContent h2,
+	.aboutContent h3
+	{
 		font-size: 3em;
 		font-weight: 900;
+		letter-spacing: -2px;
 	}
 
-.colorBg{position: absolute;bottom: 0;display: flex;width: 100%;justify-content: space-between;background-color: #f59e54;padding: 1em;padding-bottom: 0;}
-.colorBg img{/*! width: 7em; */height: 10em;filter: blur(2.1px);}
-.colorBg img:hover{filter: none;}	
+.aboutUs{
+	
+	color: #003636;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.aboutUs p{
+	
+	margin: 0;
+}
+
+.aboutHeader{
+	margin: 0;
+	letter-spacing: 7px;
+}
+.aboutUs h1,.aboutUs h2{
+	
+	font-size: 5em;
+	letter-spacing: -4px;
+	line-height: 0.9em;
+	margin-bottom: 0.3em;
+	margin-top: 0.2em;
+}
+
+.colorBg{position: fixed;bottom: 0;/*! display: flex; */width: 100vw;/*! justify-content: space-between; */background-color: #fff;padding: 1em;padding-bottom: 0;height: 100%;}
+.colorBg img{/*! width: 7em; */height: 10em;/*! filter: blur(2.1px); */}
+.colorBg img:hover{filter: none;}
+.falco{
+	position: absolute;
+	top: 0;
+	animation-name: falcon;
+	
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-duration: 6s;
+	animation-timing-function: cubic-bezier(.66,.61,.38,1.12);
+	animation-play-state: running;
+	animation-delay: 0.2s;
+}
+.goat{position: absolute;bottom: 0;right: 0;}
+.symbology{}
+
+.text-in{
+	animation-name: text-in;
+	animation-delay: 6s;
+	animation-duration: 1s;
+}
+@keyframes text-in{
+	0%{
+		opacity:0;
+		transition:opacity 0.5s ease-in;
+	}
+	50%{
+		opacity:0.6;
+		transition:opacity 0.5s ease-in;
+	}
+	100%{
+		opacity: 1;
+		transition:opacity 0.5s ease-in;
+	}
+}
+/* animation for the bird */
+
+@keyframes falcon{
+	0%{
+		transform:translateX(-100px) translateY(-20px) scale(0.8);
+	}
+	100%{
+		transform: translateX(150px) translateY(50px);
+	}
+	
+}
 .workContent{}
 	.workContent p{
 		font-weight: normal;
@@ -510,7 +597,7 @@
 	display: none;
 }
 
-.modal-open{}
+.modal-open{background-color: yellow;}
 .modal-open .swiper-container.cover{
 	 transform:scale(0.9);
 	 /*opacity:0.5;*/
