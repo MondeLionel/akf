@@ -122,6 +122,10 @@ formV.on('submit', function(e){
 });
  
 $('#aboutModal').on('shown.bs.modal', function(){
+	// play falcon cries
+	$('#falcon-audio').trigger('play');
+
+// initialise swiper
 	var aboutSwiper = new Swiper('.swiper-container.about-swiper',{
 		direction:'vertical',
 		speed:500,

@@ -46,6 +46,7 @@
 		padding: 2em 1em;
 		position: relative;
 		overflow:hidden;
+		width: 100%;
 	}
 
 	.menu a::after{
@@ -80,6 +81,27 @@
 		transform: translateX(0);
 		transition: transform 0.5s ease;
 	}
+	
+/* 	about */
+	.aboutUs h1, .aboutUs h2{
+		
+	font-size: 3em;
+	}
+	.falco{
+		
+	animation-name: mobile-falcon;
+	animation-duration: 90s;
+	}
+	
+	
+	.colorBg{
+		
+	}
+	
+	.text-in{
+		animation-delay: 0.5s;
+	}
+	
 }
 
 
