@@ -15,7 +15,7 @@
 			position: fixed;
 			width: 100vw;
 			height: 100%;
-			background-color: black;
+			background-color: #0f0f0f;
 			top:0;
 			left: 0;
 			right: 0;
@@ -25,20 +25,26 @@
 			justify-content: center;
 			align-items: center;
 			transform: translateX(100%);
-			transition: transform 0.5s ease;
+			transition: transform .5s ease;
 		}
 
 		.loader img{
 			max-width: 200px;
 		}
 
+		.loadingText{
+			position: absolute;
+			top:15%;
+			font-family: 'Playfair Display', serif;
+		}
+
 		.loading .loader{
 			transform: translateX(0%);
-			transition: transform 0.5s ease;
+			transition: transform .5s ease;
 		}
 
 		.loading .loaderImg{
-			animation-name: rotator-cuff;
+			/*animation-name: rotator-cuff;*/
 			animation-duration:1s;
 			animation-iteration-count: infinite;
 			animation-direction: normal;
@@ -49,6 +55,8 @@
 			opacity: 0;
 			visibility: hidden;
 		}
+
+
 		.menu .mobile-only{
 			display: none;
 		}
@@ -56,6 +64,25 @@
 		@media only screen and (max-width:500px) {
 			.menu .mobile-only{
 				display: block;
+			}
+
+			.loaderImg{
+				display: flex;
+				width: 80%;
+			}
+			.animatedLines .line1{
+				transform: rotate(90deg);
+			}
+			.animatedLines .line2{
+				transform: rotate(-90deg);
+
+			}
+			.animatedLines .line3{
+				/*transform: rotate(-65deg);*/
+
+			}
+			.animatedLines .line4{
+				/*transform: rotate(65deg);*/
 			}
 		}
 
@@ -69,6 +96,8 @@
 			height: auto! important;
 		}
 
+
+/*ANIMATION KEYFRAMES*/
 		@keyframes rotator-cuff{
 			0%{
 				transform: rotate(0deg);
@@ -78,14 +107,33 @@
 			}
 		}
 
+		@keyframes lasers{
+			0%{
+				width:0;
+			}
+			100%{
+				width:100%;
+			}
+		}
+
 		
 	</style>
 </head>
 <body class="loading">
 	<div class="loader">
-		<div class="loaderImg">
-			<img src="img/logo.png" alt="" class="img-fluid">
+		<h1 class="loadingText">GOAT &amp; FALCON</h1>	
+		<div class="animatedLines">
+			<span class="line1"></span>
+			<span class="line2"></span>
+			<span class="line3"></span>
+			<span class="line4"></span>
 		</div>
+
+		<div class="loaderImg">
+			<img src="img/goat.png" alt="" class="img-fluid">
+			<img src="img/falcon.png" alt="" class="img-fluid">
+		</div>
+			
 	</div>
 	<div class="transitioner"></div>
 	<div class="frame">
@@ -346,24 +394,13 @@
 										<h1>If you're not moving, <br>you're food.</h1>
 										<p>We're a team of videography, marketing and digital product developers.</p>
 										<p><i>We move the static.</i></p>
+										<div class="contactLinks">
+											<a href="mailto:lionelnyawose@gmail.com">SEND US EMAIL</a>
+											<a href="sms:+270672176298?&body=We%20would%20like%20to%20talk%20more" class="mobile-only">SEND US AN SMS</a>
+											<a href="https://wa.me/+27832456471?text=Hello%20makhalafilims" target="_blank" class="mobile-only whatsapp">Send Whatsapp</a>
+										</div>
 									</div>
 								</div>
-								<!-- <div class="swiper-slide">
-									<div class="aboutUs">
-										<p class="aboutHeader">AMAKHALA FILIM: 2017</p>
-										<h1>If you're not moving, <br>you're food.</h1>
-										<p>We're a team of videography, marketing and digital product developers.</p>
-										<p><i>We move the static.</i></p>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="aboutUs">
-										<p class="aboutHeader">AMAKHALA FILIM: 2017</p>
-										<h1>If you're not moving, <br>you're food.</h1>
-										<p>We're a team of videography, marketing and digital product developers.</p>
-										<p><i>We move the static.</i></p>
-									</div>
-								</div> -->
 							</div>
 						</div>
 					</div>

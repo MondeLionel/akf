@@ -2,7 +2,10 @@
 
 
 	$(window).load(function(){
-		$('body').removeClass('loading');
+		setTimeout(function(){
+			$('body').removeClass('loading');
+		}, 10000)
+		
 		let video = $("video");
 		var main_content = $(".loader");
 		var proximity = $(".loaderImg")

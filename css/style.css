@@ -6,6 +6,27 @@
 		background-color: #ffbc00;
 	}
 
+.loaderImg{
+	box-shadow: 1px 18px 39px -17px #000;
+	z-index: 2;
+	background-color: inherit;
+	/*! display: flex; */
+	/*! width: 80%; */
+}
+
+.loaderImg img{/*! filter: blur(1px); */}
+
+.animatedLines{width: 100vw;height: 100vh;position: absolute;}
+.loading .animatedLines span{width: ;display: block;height: 0.5em;box-shadow: 0px 0px 11px 0px #feba26;animation-name: lasers;animation-timing-function: linear;animation-duration: 25s;animation-fill-mode: forwards;animation-direction: normal;}
+.animatedLines .line1{background-color: #fcb827;transform: rotate(90deg);transform-origin: left;}
+.animatedLines .line2{background-color: #feba26;margin-right: 0;margin-left: auto;transform-origin: right;transform: rotate(-90deg);/*! position: absolute; *//*! bottom: 0; */right: 0;}
+.animatedLines .line3{margin-bottom: 0;margin-top: auto;background-color: #feba26;position: absolute;bottom: 0;transform-origin: left;transform: rotate(0deg);}
+.animatedLines .line4{margin-bottom: 0;margin-top: auto;background-color: #feba26;position: absolute;top: 0;transform-origin: right;transform: rotate(0deg);/*! right: 0; */}
+
+
+.animatedLines span{
+	display: none;
+}
 body.modal-open{
 	background-color: #ffbc00;
 }
@@ -469,6 +490,25 @@ body.modal-open{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.aboutUs a{
+	
+	color: inherit;
+	margin-right: 1em;
+	text-decoration: none;
+	border: 1px solid #003636;
+	padding: 0.5em;
+	text-transform: uppercase;
+	margin-bottom: 1em;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+}
+.contactLinks{
+	
+	margin-top: 2em;
+	display: flex;
+	flex-wrap: wrap;
 }
 .aboutUs p{
 	
