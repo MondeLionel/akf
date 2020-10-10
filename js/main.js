@@ -3,26 +3,11 @@
 
 	$(window).load(function(){
 		setTimeout(function(){
+			// e.preventDefault();
 			$('body').removeClass('loading');
-		}, 10000)
-		
-		let video = $("video");
-		var main_content = $(".loader");
-		var proximity = $(".loaderImg")
-		var movementStrength = 6;
-		if(main_content != null || main_content != undefined){
-			main_content.on("mousemove", function(e){
-				if (e.clientX > 0 && e.clientY > 0){
-					proximity.addClass("show");
-					var xtrans = movementStrength*100 / e.clientX *100 - proximity.width();
-					var xtrans = Math.floor(xtrans);
-					proximity.css("animation-duration", xtrans + "s");
-					// console.log(Math.floor(xtrans));
-				}else{
-					proximity.removeClass("show");
-				}
-			})
-		}
+
+		}, 1000)
+			
 	})
 
 	var mySwiper = new Swiper ('.swiper-container.cover', {
@@ -76,7 +61,7 @@ function playVid (){
 }
 
 function pauseVid(){
-	// this.playing ? this.pause() : this.play();
+	$("video").trigger("pause");
 }
 
 
@@ -206,23 +191,9 @@ $("video").on('click', function(){
 
 // initialise videos with videojs
 
-let myPlayers = Array(
-	videojs('favela'),
-	videojs('feels'),
-	videojs('schwepps'),
-	videojs('phesheya'),
-	videojs('bee'),
-	videojs('homii'),
-	videojs('dsff'),
-	videojs('nostalgia'),
-	videojs('oxy'),
-	videojs('butifly'),
-	videojs('pop')
-	)
 
-	myPlayers.forEach(function(item,index){
-		// console.log(index)vbv
-	})
+
+
 })
 
 
@@ -234,6 +205,12 @@ $(".prompt-clear").on('click', function(){
 	sessionStorage.setItem('audio_prompt', 'seen');		
 })
 
+
+$("#bulb").on("click", function(){
+	let _this = $(this)
+	_this.toggleClass("on");
+	$(".anim-text").toggleClass("off")
+})
 
 
 
