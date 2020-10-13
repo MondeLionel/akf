@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+<html>
+<head>
+	<title></title>
+	<style>
+		body  {
+  display: block;
+  height:13000px;
+}
+#v0{
+  position: fixed ;
+  top: 0  ;
+  left: 0  ;
+  width: 100%;
+}
+#time{
+  position:fixed;
+  z-index: 1;
+}
+
+.content {
+  opacity:0;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  display: block;
+  background: #fff;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  transform: translateY(0%);
+  transition: 0.7s ease-in-out all;
+}
+.content.active {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+	</style>
+</head>
+<body>
+
+	<p id="time"></p>
+<video id="v0" tabindex="0" autobuffer preload muted>
+	<source type="video/mp4" src="video/woo1.mp4">
+	
+	<p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+</video>
+<!-- <div class="content"><p>Hello People</p></div> -->
+
+
+<!-- scripts -->
+
+<script src="js/jquery.min.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/ScrollMagic.min.js"></script>
+<script src="js/animation.gsap.min.js"></script>
+
+
+<script type="text/javascript">
+	$(function () {
+
+    var vid = $('#v0')[0]; // jquery option
+    
+    // pause video on load
+    vid.pause();
+    
+    // pause video on document scroll (stops autoplay once scroll started)
+    window.onscroll = function () {
+        vid.pause();
+        //console.log(vid.currentTime, window.pageYOffset / 400);
+        $("#time").text(vid.currentTime);
+      
+      if (vid.currentTime > 7 && vid.currentTime < 8) {
+        $('.content').addClass('active');
+      } else {
+        $('.content').removeClass('active');
+      }
+        
+    };
+    
+    // refresh video frames on interval for smoother playback
+    setInterval(function () {
+        
+        if((window.pageYOffset / 1000) > 9 && (window.pageYOffset / 1000) < 10){
+            // vid.pause();
+            console.log("video paused")
+        } else {
+            
+            vid.currentTime = window.pageYOffset / 800;
+        }
+        
+        
+    }, 32);
+                
+                
+               
+});
+</script>
+</body>
+</html>

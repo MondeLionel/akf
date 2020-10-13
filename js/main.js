@@ -1,6 +1,8 @@
 	'use strict'
 
 
+
+
 	$(window).load(function(){
 		setTimeout(function(){
 			// e.preventDefault();
@@ -56,9 +58,6 @@ $(".contact-tip").on('click', function(){
 	console.log("click")
 })
 
-function playVid (){
-	
-}
 
 function pauseVid(){
 	$("video").trigger("pause");
@@ -109,9 +108,28 @@ formV.on('submit', function(e){
 
 });
  
+
+
+let textA = $('.hideText');
+let workText = $('.content h3');
+let workDate = $('.content h1');
+
+let tl = new TimelineMax({paused:true});
+tl.staggerTo(textA, 1.1,{top:'0%',ease:Power4.easeOut}, 0.1,5)
+tl.from('.c-link', 1,{opacity:'0',ease:Power4.easeIn},5)
+
+let worktl = new TimelineMax({paused:true})
+
+worktl.from(workText, 1,{y:'100%',ease:Power4.easeOut},1)
+worktl.from(workDate, 1,{y:'100%',ease:Power4.easeOut},1.2)
+
+
 $('#aboutModal').on('shown.bs.modal', function(){
 	// play falcon cries
 	$('#falcon-audio').trigger('play');
+	
+		tl.play()
+	
 
 // initialise swiper
 	var aboutSwiper = new Swiper('.swiper-container.about-swiper',{
@@ -131,6 +149,8 @@ $('#worksModal').on('shown.bs.modal', function () {
 	}else{
 		$("body").addClass("video-prompt");
 	}
+
+	worktl.play()
 
 
   var worksSwiper = new Swiper('.swiper-container.works',{
@@ -211,6 +231,8 @@ $("#bulb").on("click", function(){
 	_this.toggleClass("on");
 	$(".anim-text").toggleClass("off")
 })
+
+
 
 
 
