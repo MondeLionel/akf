@@ -102,6 +102,25 @@
 		animation-delay: 0.5s;
 	}
 	
+	.swiper-slide .mobile-wrapper .content{
+		
+	top: 0;
+	background-color: darkturquoise;
+	width: 100%;
+	left: 0;
+	}
+	
+	.mobile-wrapper{
+		
+	}
+	
+	.modal-body .close{
+		
+	right: 0;
+	}
+	.tablet{width: 100%;border: none;border-radius: 0;background-color: inherit;}
+	.mobile{}
+	.mobile-wrapper{padding: 0;}
 }
 
 

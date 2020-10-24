@@ -2,6 +2,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width-device-width, initial-scale=1.0">
 	<title>AMAKHALA FILIM</title>
+	<script src="serviceworker.js"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/swiper.css">
 	<link rel="stylesheet" href="css/video-js.min.css">
@@ -179,6 +180,7 @@
 	</style>
 </head>
 <body class="loading">
+	<div class="page--load"></div>
 	<div class="loader">
 		<div class="light">
 			<span></span>
@@ -439,7 +441,7 @@
 		</div>
 	</div>
 	<!-- second blade -->
-	<div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
+	<div class="modal" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="storyModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-body">
@@ -524,6 +526,7 @@
 	<script src="js/swiper.js"></script>
 	<script src="js/video.min.js"></script>
 	<script src="js/main.js"></script>
+
 
 	<audio src="audio/falcon_cut.mp3" id="falcon-audio"></audio>
 </body>
