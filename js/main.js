@@ -1,60 +1,59 @@
-	'use strict'
 
 
 
 (function(){
 const body = document.querySelector('body')
-        var startPos;
-        var startPosLat;
-        var startPosLong;
-        var distance;
+      //   var startPos;
+      //   var startPosLat;
+      //   var startPosLong;
+      //   var distance;
       
-        if (navigator.geolocation) {
+      //   if (navigator.geolocation) {
 
-          startPosLat = -299.91708;
-          startPosLong = 30.97528;
+      //     startPosLat = -299.91708;
+      //     startPosLong = 30.97528;
 
-          // $("#startLat").text(startPosLat);
-          // $("#startLon").text(startPosLong);
+      //     // $("#startLat").text(startPosLat);
+      //     // $("#startLon").text(startPosLong);
       
-          navigator.geolocation.getCurrentPosition(function(position) {
-            console.log(position.coords.latitude + " is my current latitude");
-            console.log(position.coords.longitude+ " is my current longitude");
+      //     navigator.geolocation.getCurrentPosition(function(position) {
+      //       console.log(position.coords.latitude + " is my current latitude");
+      //       console.log(position.coords.longitude+ " is my current longitude");
 
-            distance = calculateDistance(startPosLat, startPosLong,position.coords.latitude, position.coords.longitude)
-           console.log(distance);
+      //       distance = calculateDistance(startPosLat, startPosLong,position.coords.latitude, position.coords.longitude)
+      //      console.log(distance);
 
-            if(distance < .05){
-              console.log("Yes, were inside .05 KM!!! :) A+")
-            } 
-            if(distance > .05){
-              console.log("No, not inside .05 KM :(")
-               body.classList.add("out--perimeter");
-               var overlay = document.createElement("div")
-               overlay.classList.add('fire')
-               overlay.innerHTML="<H1>YOU CANNOT WATCH THE STREAM HERE. YOU NEED TO GO TO MONTCLAIR</H1>"
-               body.appendChild(overlay)
-            }
-          });
-        }
+      //       if(distance < .05){
+      //         console.log("Yes, were inside .05 KM!!! :) A+")
+      //       } 
+      //       if(distance > .05){
+      //         console.log("No, not inside .05 KM :(")
+      //          body.classList.add("out--perimeter");
+      //          var overlay = document.createElement("div")
+      //          overlay.classList.add('fire')
+      //          overlay.innerHTML="<H1>YOU CANNOT WATCH THE STREAM HERE. YOU NEED TO GO TO MONTCLAIR</H1>"
+      //          body.appendChild(overlay)
+      //       }
+      //     });
+      //   }
       
-      // Reused code - copyright Moveable Type Scripts - retrieved May 4, 2010.
-      // http://www.movable-type.co.uk/scripts/latlong.html
-      // Under Creative Commons License http://creativecommons.org/licenses/by/3.0/
-      function calculateDistance(lat1, lon1, lat2, lon2) {
-        var R = 6371; // km
-        var dLat = (lat2-lat1).toRad();
-        var dLon = (lon2-lon1).toRad();
-        var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
-                Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) *
-                Math.sin(dLon/2) * Math.sin(dLon/2);
-        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-        var d = R * c;
-        return d;
-      }
-      Number.prototype.toRad = function() {
-        return this * Math.PI / 180;
-      }
+      // // Reused code - copyright Moveable Type Scripts - retrieved May 4, 2010.
+      // // http://www.movable-type.co.uk/scripts/latlong.html
+      // // Under Creative Commons License http://creativecommons.org/licenses/by/3.0/
+      // function calculateDistance(lat1, lon1, lat2, lon2) {
+      //   var R = 6371; // km
+      //   var dLat = (lat2-lat1).toRad();
+      //   var dLon = (lon2-lon1).toRad();
+      //   var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+      //           Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) *
+      //           Math.sin(dLon/2) * Math.sin(dLon/2);
+      //   var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+      //   var d = R * c;
+      //   return d;
+      // }
+      // Number.prototype.toRad = function() {
+      //   return this * Math.PI / 180;
+      // }
 })()
 	
 
@@ -169,6 +168,8 @@ formV.on('submit', function(e){
 let textA = $('.hideText');
 let workText = $('.content h3');
 let workDate = $('.content h1');
+let homeText = $('.promoAnim');
+let menuItem = $('.menuItem');
 
 let tl = new TimelineMax({paused:true});
 tl.staggerTo(textA, 1.1,{top:'0%',ease:Power4.easeOut}, 0.1,5)
@@ -182,6 +183,29 @@ worktl.from(workDate, 1,{y:'100%',ease:Power4.easeOut},1.2)
 
 let trTl = new TimelineMax({paused:true})
 trTl.fromTo('.page--load', 2,{opacity:0, display:'none'}, {opacity:1,display:'block'})
+
+let hometl = new TimelineMax({})
+
+
+hometl.fromTo(homeText, 1,{
+	y:"100px", 
+	ease:Power4.easeIn
+},{
+	y:"0px", 
+},1)
+
+
+hometl.staggerFrom('.menuItem',1,{
+	y:"100px", 
+	ease:Power4.easeIn
+},{
+	y:"0px"
+},2)
+
+
+
+
+
 
 $('#aboutModal').on('shown.bs.modal', function(){
 	// play falcon cries

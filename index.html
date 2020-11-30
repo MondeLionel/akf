@@ -2,7 +2,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width-device-width, initial-scale=1.0">
 	<title>AMAKHALA FILIM</title>
-	<script src="serviceworker.js"></script>
+	<!-- <script src="serviceworker.js"></script> -->		
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/swiper.css">
 	<link rel="stylesheet" href="css/video-js.min.css">
@@ -134,20 +134,7 @@
 				display: flex;
 				width: 80%;
 			}
-			.animatedLines .line1{
-				transform: rotate(90deg);
-			}
-			.animatedLines .line2{
-				transform: rotate(-90deg);
 
-			}
-			.animatedLines .line3{
-				/*transform: rotate(-65deg);*/
-
-			}
-			.animatedLines .line4{
-				/*transform: rotate(65deg);*/
-			}
 
 			.fi{
 				display: none;
@@ -179,7 +166,7 @@
 	}
 	</style>
 </head>
-<body class="loading">
+<body class="">
 	<div class="page--load"></div>
 	<div class="loader">
 		<div class="light">
@@ -201,9 +188,9 @@
 		</a>
 		<a href="#" class="openMenu" onclick="toggleMenu()">Menu</a>
 		<div class="menu">
-			<a href="javascript:void(0)" data-toggle="modal" data-target="#worksModal">Work <span>Some campaigns</span></a>
-			<a href="javascript:void(0)" data-toggle="modal" data-target="#aboutModal">About Us</a>
-			<a href="javascript:void(0)" class="contact-tip">Contact Us</a>
+			<a href="javascript:void(0)" data-toggle="modal" data-target="#worksModal"><span class="menuItem">Work</span></a>
+			<a href="javascript:void(0)" data-toggle="modal" data-target="#aboutModal"><span class="menuItem">About Us</span></a>
+			<a href="javascript:void(0)" class="contact-tip"><span class="menuItem">Contact Us</span></a>
 			<!-- <a href="javascript:void(0)" data-toggle="modal" data-target="#contactModal">Alternative contact</a> -->
 			<a href="sms:31313?&body=ELLIE GOULDING GONGONG" class="mobile-only">SMS us!</a>
 			<a href="https://wa.me/+27832456471?text=Hello%20makhalafilims" target="_blank" class="mobile-only whatsapp">Send Whatsapp</a>
@@ -232,14 +219,14 @@
 				<div class="background scaleBack" ></div>
 				<div class="clipped_bg"></div>
 				<div class="content">
-					<p>Promography unleashed.</p>
+					<p><span class="promoAnim">Promography unleashed.</span></p>
 				</div>	
 			</div>
 			<div class="swiper-slide flex_div" data-bg="2">
 				<div class="background scaleBack" ></div>
 				<div class="clipped_bg"></div>
 				<div class="content">
-					<p>Art Direction on next.</p>
+					<p><span  class="promoAnim">Art Direction on next.</span></p>
 				</div>
 			</div>
 			<!-- <div class="swiper-slide flex_div" data-bg="3">
@@ -266,13 +253,13 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-body">
-					<div class="prompt">
+					<!-- <div class="prompt">
 						<div class="prompt-content">
 							<p><b>PRESS THE VIDEO TO PLAY IT</b></p>
 							<p>press it again to pause</p>
 							<a href="javascript:void(0)" class="btn prompt-clear">Got it</a>
 						</div>
-					</div>
+					</div> -->
 					<a href="#" class="close" data-dismiss="modal">close</a>
 					<div class="workContent">
 						<div class="swiper-container works swiper-no-swiping">
@@ -280,8 +267,8 @@
 								<div class="swiper-slide">
 									<div class="mobile-wrapper favela">
 										<div class="content" data-swiper-parallax="-300">
-											<h3>Favela Vibes Promo</h3>
-											<h1>2019</h1>
+											<h3><span>Favela Vibes Promo</span></h3>
+											<h1><span>2019</span></h1>
 										</div>
 										<!-- <button id="playbutton">PLAY</button> -->
 										<div class="mobile">
@@ -296,8 +283,8 @@
 								<div class="swiper-slide">
 									<div class="mobile-wrapper feels">
 										<div class="content" data-swiper-parallax="-300">
-											<h3>Finding Feels Lifestyle</h3>
-											<h1>2019</h1>
+											<h3><span>Finding Feels Lifestyle</span></h3>
+											<h1><span>2019</span></h1>
 										</div>
 										<!-- <button id="playbutton">PLAY</button> -->
 										<div class="mobile">
@@ -311,8 +298,8 @@
 								<div class="swiper-slide">
 									<div class="mobile-wrapper schwepps">
 										<div class="content" data-swiper-parallax="-300">
-											<h3>Schwepps Tropical Pink Campaign</h3>
-											<h1>2020</h1>
+											<h3><span>Schwepps Tropical Pink Campaign</span></h3>
+											<h1><span>2020</span></h1>
 										</div>
 										<div class="mobile">
 											<!-- <a href="javascript:void(0)" id="playbutton3" class="btn btn-primary">PLAY</a> -->
@@ -323,8 +310,8 @@
 								<div class="swiper-slide">
 									<div class="mobile-wrapper phesheya">
 										<div class="content" data-swiper-parallax="-300">
-											<h3>AMOS Album Promo</h3>
-											<h1>2020</h1>
+											<h3><span>AMOS Album Promo</span></h3>
+											<h1><span>2020</span></h1>
 										</div>
 										<div class="mobile">
 											<!-- <a href="javascript:void(0)" id="playbutton4" class="btn btn-primary">PLAY</a> -->
@@ -335,8 +322,8 @@
 								<div class="swiper-slide">
 									<div class="mobile-wrapper sss">
 										<div class="content" data-swiper-parallax="-300">
-											<h3>Same SX Saturdays</h3>
-											<h1>2018</h1>
+											<h3><span>Same SX Saturdays</span></h3>
+											<h1><span>2018</span></h1>
 										</div>
 										<div class="tablet">
 											<img src="video/sss.gif" alt="" class="img-fluid">
@@ -346,8 +333,8 @@
 								<div class="swiper-slide">
 									<div class="mobile-wrapper bee">
 										<div class="content" data-swiper-parallax="-300">
-											<h3>B STOP NONSENSE</h3>
-											<h1>2020</h1>
+											<h3><span>B STOP NONSENSE</span></h3>
+											<h1><span>2020</span></h1>
 										</div>
 										<div class="tablet">
 											<!-- <a href="javascript:void(0)" id="playbutton5" class="btn btn-primary">PLAY</a> -->
@@ -358,8 +345,8 @@
 								<div class="swiper-slide">
 									<div class="mobile-wrapper homii">
 										<div class="content" data-swiper-parallax="-300">
-											<h3>Homii Fox Ad</h3>
-											<h1>2020</h1>
+											<h3><span>Homii Fox Ad</span></h3>
+											<h1><span>2020</span></h1>
 										</div>
 										<div class="tablet">
 											<!-- <a href="javascript:void(0)" id="playbutton6" class="btn btn-primary">PLAY</a> -->
@@ -370,8 +357,8 @@
 								<div class="swiper-slide">
 									<div class="mobile-wrapper dsff">
 										<div class="content" data-swiper-parallax="-300">
-											<h3>DURBAN STREET FOOD FESTIVAL</h3>
-											<h1>2019</h1>
+											<h3><span>DURBAN STREET FOOD FESTIVAL</span></h3>
+											<h1><span>2019</span></h1>
 										</div>
 										<div class="tablet">
 											<!-- <a href="javascript:void(0)" id="playbutton7" class="btn btn-primary">PLAY</a> -->
@@ -382,8 +369,8 @@
 								<div class="swiper-slide">
 									<div class="mobile-wrapper nostalgia">
 										<div class="content" data-swiper-parallax="-300">
-											<h3>NOSTALGIA T1</h3>
-											<h1>2020</h1>
+											<h3><span>NOSTALGIA T1</span></h3>
+											<h1><span>2020</span></h1>
 										</div>
 										<div class="mobile">
 											<!-- <a href="javascript:void(0)" id="playbutton8" class="btn btn-primary">PLAY</a> -->
@@ -394,8 +381,8 @@
 								<div class="swiper-slide">
 									<div class="mobile-wrapper oxy">
 										<div class="content" data-swiper-parallax="-300">
-											<h3>Ndumi OXY face Ad</h3>
-											<h1>2020</h1>
+											<h3><span>Ndumi OXY face Ad</span></h3>
+											<h1><span>2020</span></h1>
 										</div>
 										<div class="tablet">
 											<!-- <a href="javascript:void(0)" id="playbutton9" class="btn btn-primary">PLAY</a> -->
@@ -406,8 +393,8 @@
 								<div class="swiper-slide">
 									<div class="mobile-wrapper butifly">
 										<div class="content" data-swiper-parallax="-300">
-											<h3>FINDING FEELS BUTIFLY</h3>
-											<h1>2019</h1>
+											<h3><span>FINDING FEELS BUTIFLY</span></h3>
+											<h1><span>2019</span></h1>
 										</div>
 										<div class="mobile">
 											<!-- <a href="javascript:void(0)" id="playbutton10" class="btn btn-primary">PLAY</a> -->
@@ -418,8 +405,8 @@
 								<div class="swiper-slide">
 									<div class="mobile-wrapper pop">
 										<div class="content" data-swiper-parallax="-300">
-											<h3>POP UP DURBAN PARTY</h3>
-											<h1>2020</h1>
+											<h3><span>POP UP DURBAN PARTY</span></h3>
+											<h1><span>2020</span></h1>
 										</div>
 										<div class="tablet">
 											<!-- <a href="javascript:void(0)" id="playbutton11" class="btn btn-primary">PLAY</a> -->
@@ -524,6 +511,7 @@
 	<script src="js/TweenMax.min.js"></script>
 	<script src="js/ScrollMagic.min.js"></script>
 	<script src="js/swiper.js"></script>
+	<script src="js/TextPlugin.min.js"></script>
 	<script src="js/video.min.js"></script>
 	<script src="js/main.js"></script>
 
